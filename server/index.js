@@ -2,7 +2,6 @@ const http = require("http");
 const express = require("express");
 const socketio = require("socket.io");
 const cors = require("cors");
-const path = require("path");
 
 const { addUser, removeUser, getUser, getUsersInRoom } = require("./users");
 
@@ -13,10 +12,6 @@ const server = http.createServer(app);
 const io = socketio(server);
 
 app.use(cors());
-app.use(express.static("client/build"));
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
 app.use(router);
 
 io.on("connect", (socket) => {
@@ -65,9 +60,6 @@ io.on("connect", (socket) => {
       });
     }
   });
-});
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
 server.listen(process.env.PORT || 5000, () =>
