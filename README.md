@@ -10,7 +10,7 @@
 
 - This full Realtime Chat Application was created with React on the front end and with NodeJS + Socket.io web socket library on the back end.
 
--The user has to login with a username and a room number. Once logged in, the user joins the room waiting for at least a second user to join the same room. Once the users are joined in the same room, they can start chattting in realtime.
+-The user has to login with a username and a room number. Once logged in, the user joins the room waiting for at least a second user to join the same room. Once the users are joined in the same room, they can start chatting in realtime.
 
 ## Technologies Used
 
