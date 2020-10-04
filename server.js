@@ -2,6 +2,7 @@ const http = require("http");
 const express = require("express");
 const socketio = require("socket.io");
 const cors = require("cors");
+const path = require("path");
 
 const { addUser, removeUser, getUser, getUsersInRoom } = require("./users");
 
@@ -64,6 +65,9 @@ io.on("connect", (socket) => {
       });
     }
   });
+});
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
 server.listen(process.env.PORT || 5000, () =>
