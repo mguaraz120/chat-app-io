@@ -2,7 +2,7 @@
 
 ## Live Link
 
-- To view this page: https://nifty-bell-a22a2c.netlify.app/Countries-Info-API/
+- To view this page: https://nifty-bell-a22a2c.netlify.app
 - My Portfolio: https://mguaraz120.github.io/Portfolio/
 - My Linkedin Page: https://www.linkedin.com/in/mario-vizcaino-187ab9104/
 
